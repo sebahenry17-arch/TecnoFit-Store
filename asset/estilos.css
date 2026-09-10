@@ -1,0 +1,235 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("fondopagina.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.header .logo h1 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header .nav a:hover {
+    color: #ffe600;
+}
+
+/* Contenedor del formulario */
+.registro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Formulario */
+form {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Título del formulario */
+form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Inputs */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botones */
+button {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Botón eliminar dispositivo */
+.removeDevice {
+    background: #dc3545;
+    margin-top: 8px;
+}
+
+.removeDevice:hover {
+    background: #a71d2a;
+}
+/* Footer */
+.footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* empuja el footer al final */
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffe600;
+}
+
+/* Responsive footer */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-nav a {
+        font-size: 14px;
+    }
+}
+
+/* 📱 Media Queries para móviles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .header .nav a {
+        margin: 8px 0;
+    }
+
+    .registro {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo h1 {
+        font-size: 20px;
+    }
+
+    .registro {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* ocupa toda la altura del celular */
+    }
+
+    form {
+        width: 100%;          /* ocupa todo el ancho */
+        max-width: none;      /* elimina límite */
+        height: 100%;         /* ocupa toda la altura */
+        margin: 0;
+        border-radius: 0;     /* bordes rectos para pantalla completa */
+        padding: 20px;
+        box-shadow: none;     /* opcional: quita sombra en móviles */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    form h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
