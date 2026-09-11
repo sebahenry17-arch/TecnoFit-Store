@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de usuario | TecnoFit</title>
     <link rel="stylesheet" href="asset/estilos.css">
     <script src="asset/script.js" defer></script>
 </head>
+
 <body>
-<header class="header">
-    <div class="logo">
-        <h1>TecnoFit</h1>
-    </div>
-    <nav class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="registro.html">Registro</a>
-        <a href="login.html">Login</a>
-    </nav>
-</header>
+    <header class="header">
+        <div class="logo">
+            <h1>TecnoFit</h1>
+        </div>
 
-<section class="registro">
-    <form id="registroForm">
-        <h2>Registro de Usuario - TecnoFit</h2>
+        <nav class="nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="index.html">Registro</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
 
-        <label for="nombre">Nombre Completo</label>
-        <input type="text" id="nombre" maxlength="80" required>
+    <section class="registro">
+        <form id="registroForm">
+            <h2>Registro de Usuario - TecnoFit</h2>
 
-        <label for="correo">Correo Electrónico</label>
-        <input type="email" id="correo" maxlength="60" placeholder="Ej: usuario@duoc.cl" required>
+            <label for="nombre">Nombre Completo</label>
+            <!-- 'name' para guardar al enviar el formulario -->
+            <!-- 'id' para asociar con el label -->
+            <input type="text" name="nombre" id="nombre" maxlength="80" required>
 
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" required minlength="8">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" name="correo" id="correo" maxlength="60" placeholder="Ej: usuario@duoc.cl" required>
 
-        <label for="confirmPassword">Confirmar Contraseña</label>
-        <input type="password" id="confirmPassword" required>
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" minlength="8" required>
 
-        <label for="telefono">Teléfono (opcional)</label>
-        <input type="tel" id="telefono" placeholder="Ej: 912345678">
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" required>
 
-        <h3>Dispositivos vinculados</h3>
-        <div id="dispositivos"></div>
-        <button type="button" id="addDevice">+ Añadir Dispositivo</button>
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Ej: 9 1234 5678">
 
-        <button type="submit">Registrarse</button>
-    </form>
-</section>
+            <h3>Dispositivos vinculados</h3>
+
+            <button type="button" id="addDevice">+ Añadir Dispositivo</button>
+
+            <div id="dispositivos">
+                <!-- Aquí se agregarán los elementos HTML de los dispositivos -->
+
+            </div>
+
+            <button type="submit" id="submitRegistro">Registrarse</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 TecnoFit - Todos los derechos reservados</p>
+    </footer>
 </body>
-<footer class="footer">
-    <p>&copy; 2026 TecnoFit - Todos los derechos reservados</p>
-
-</footer>
 </html>
