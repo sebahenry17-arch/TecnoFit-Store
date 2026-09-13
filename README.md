@@ -29,8 +29,6 @@ Inicio (inicio.html)
 
 Muestra saludo con el nombre del usuario.
 
-Lista los dispositivos vinculados.
-
 Botón Logout que borra la sesión y redirige al login.
 
 Logout
@@ -66,7 +64,7 @@ Registro → crea usuario en localStorage.
 
 Login → valida correo y contraseña.
 
-Inicio → muestra saludo y dispositivos.
+Inicio → muestra saludo
 
 Logout → borra sesión y redirige al login.
 
