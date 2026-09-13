@@ -120,7 +120,7 @@ function validarCampos() {
         return false;
     }
 
-    // COntraseña:
+    // Contraseña:
     const regexContra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
     if (!regexContra.test(contrasena)) {
         alert("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial.");
@@ -136,7 +136,7 @@ function validarCampos() {
     // Teléfono (opcional):
     if (telefono !== "") {
         
-        const regexTelefono = /^[0-9\s]{9,11}$/;
+        const regexTelefono = /^\d\s?\d{4}\s?\d{4}$/;
         if (!regexTelefono.test(telefono)) {
             alert("El teléfono ingresado no es válido. Debe tener exactamente 9 dígitos sin código de país.");
             return false;
@@ -144,6 +144,7 @@ function validarCampos() {
             // +56912345678: False
 
             // 912345678: True
+            // 9 1234 5678: True
 
             // 12345678: False
         }
